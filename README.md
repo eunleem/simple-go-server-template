@@ -1,2 +1,3 @@
-# simple-go-server-template
-Simple Go Server Template using gin-gonic framework
+# Simple Go Server Template
+
+Simple Go Server Template

@@ -1,0 +1,16 @@
+server:
+  domain: "localhost"
+  port: 8080
+  version: "0.1"
+  webDir: "./web"
+  fullAddress: "http://localhost:8080"
+
+mongoDb:
+  host: "localhost"
+  username: ""
+  password: ""
+  database: "sample_dev"
+
+redis:
+  host: "localhost:6379"
+  password: ""

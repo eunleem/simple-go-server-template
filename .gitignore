@@ -1,3 +1,7 @@
+configs/server.dev.yaml
+
+simiple-go-server-template
+
 # Binaries for programs and plugins
 *.exe
 *.dll
