@@ -82,6 +82,18 @@ func main() {
 	// Register Routes
 	http.HandleFunc("/", indexHandler)
 
+	jsDir := http.FileServer(http.Dir(filepath.Join(conf.WebServer.WebDir, "js")))
+	http.Handle("/js/", http.StripPrefix("/js/", jsDir))
+
+	cssDir := http.FileServer(http.Dir(filepath.Join(conf.WebServer.WebDir, "css")))
+	http.Handle("/css/", http.StripPrefix("/css/", cssDir))
+
+	imgDir := http.FileServer(http.Dir(filepath.Join(conf.WebServer.WebDir, "img")))
+	http.Handle("/img/", http.StripPrefix("/img/", imgDir))
+
+	staticDir := http.FileServer(http.Dir(filepath.Join(conf.WebServer.WebDir, "static")))
+	http.Handle("/static/", http.StripPrefix("/static/", staticDir))
+
 	// Run Server
 	portStr := strconv.Itoa(conf.WebServer.Port)
 	log.Print("Listening on port " + portStr)
